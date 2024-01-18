@@ -56,7 +56,7 @@ public class RandomCalculatorTest extends  AbstractCalculatorTest {
     @ValueSource(ints = {1,2,3,4,5,6})
     void testWithParameter(int value) {
         var expected = value + value;
-        var result = Calculator.add(value, value);
+        var result = calculator.add(value, value);
 
         Assertions.assertEquals(result, expected);
     }
@@ -73,7 +73,7 @@ public class RandomCalculatorTest extends  AbstractCalculatorTest {
     @MethodSource({"valueSource"})
     void testWithMethodParam(Integer value) {
         var expected = value + value;
-        var result = Calculator.add(value, value);
+        var result = calculator.add(value, value);
 
         Assertions.assertEquals(result, expected);
     }
